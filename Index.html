@@ -1,21 +1,20 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- Здесь подключим стили -->
-<link rel="stylesheet" href="styles.css">
-<title>Догонялки</title>
+<title>Не догонишь!!!</title>
+<style type="text/css">
+#knopka {position:absolute; left:25px; top:25px}
+</style>
+<script language="JavaScript">
+function pryg_skok()
+{
+ document.getElementById("knopka").style.left=Math.random()*500+"px";
+ document.getElementById("knopka").style.top=Math.random()*500+"px";
+}
+</script>
 </head>
 
 <body>
-<h1>Чтобы получить премию, нажмите на красную кнопку</h1>
-<!-- Здесь будет код кнопки -->
-<button class="btn-class-name" id="runawayBtn">
-   <span class="back"></span>
-   <span class="front"></span>
- </button>
- <!--Здесь подключим скрипт -->
-<script src="script.js"></script>
+<input type=button id="knopka" value="Нет" onMouseOver="pryg_skok()" onClick="alert('Вау, ты все-таки нажал!!!')">
 </body>
 </html>
